@@ -1,3 +1,5 @@
+/* General */
+
 body {
   font-size: 16px;
   font-family: 'Roboto', sans-serif;
@@ -23,16 +25,86 @@ body,
   font-family: 'Playfair Display', serif;
 }
 
+/* About */
+
 .c-about {
   background: lightyellow;
   max-width: 1200px;
 }
 
-.c-projects-list__grid {
+/* Projects */
+
+.c-projects-list {
+  max-width: 1200px;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  /* place-items: center; */
+  grid-template-rows: 2fr 2fr;
+  grid-template-columns: repeat(3, 260px);
+  gap: 24px;
 }
+
+@media (max-width: 1200px) {
+  .c-projects-list {
+    grid-template-columns: repeat(2, 260px);
+    grid-template-rows: 2fr 2fr 2fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .c-projects-list {
+    grid-template-columns: 260px;
+    grid-template-rows: repeat(auto-fill, 1fr);
+  }
+}
+
+.c-project {
+  min-height: 280px;
+  padding-bottom: 40px;
+  box-shadow: 1px 4px 5px rgb(219, 219, 219);
+  border-radius: 4px;
+}
+
+.c-project__body {
+  padding: 1rem;
+  display: flex;
+  flex-flow: column;
+}
+
+.c-project__wrapper {
+  display: flex;
+}
+
+.c-project__heading {
+  font-size: 1.1rem;
+  margin-right: auto;
+}
+
+.c-project__link {
+  text-decoration: none;
+  margin-left: 0.6rem;
+}
+
+.c-project__description {
+  font-size: 0.8rem;
+  color: rgb(55, 55, 55);
+  letter-spacing: 0.04em;
+}
+
+.c-project__link-img {
+  width: 25px;
+}
+
+.c-project__img {
+  height: 160px;
+  background: rgb(181, 112, 167);
+  border-radius: 4px 4px 0 0;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  color: white;
+  font-size: 24px;
+}
+
+/* Contact */
 
 .c-contact {
   min-width: 100%;
