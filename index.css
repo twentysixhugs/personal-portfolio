@@ -261,5 +261,38 @@ body,
 
 .c-contact {
   min-width: 100%;
+  padding: 40px;
+  margin-top: 70px;
+
+  display: flex;
+  flex-flow: column;
+  gap: 24px;
+
   background: #0891b2;
+  color: white;
+}
+
+.c-contact__link {
+  text-decoration: none;
+}
+
+.c-contact__link-img {
+  width: 27px;
+}
+
+.c-contact__email-img {
+  width: 27px;
+}
+
+.c-contact__email,
+.c-contact__social-networks {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+@media (max-width: 600px) {
+  .c-contact {
+    padding: 20px;
+  }
 }
